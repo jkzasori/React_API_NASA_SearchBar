@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
+import PostReducer from './reducer_nasa';
 
 const rootReducer = combineReducers({
-	state: (state = {}) => state
+	nasa: PostReducer
 });
 export default rootReducer;
