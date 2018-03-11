@@ -1,9 +1,10 @@
 import lodash from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import CardNasa from '../containers/card_nasa';
 
 import {fetchNasa} from '../actions';
-
 import SearchBar from './search_bar';
 import './nasa_index.css';
 class NASA extends Component {
@@ -14,7 +15,15 @@ class NASA extends Component {
 		return _.map(this.props.nasa, fact => {
 			return (
 				<li className="list-group-item" key={fact.date}>
-					{fact.title} - {fact.date}
+						
+						<CardNasa 
+							title={fact.title}
+							description={fact.explanation}
+							image={fact.url}
+							date={fact.date}
+						/>
+						 
+					
 				</li>
 				)
 		})
@@ -23,8 +32,8 @@ class NASA extends Component {
 		console.log(this.props.nasa);
 		return (
 				<div>
-					<div className="text-center">
-					<h3 className="title ">HI! My Practice Seacrh API_NASA</h3>
+					<div className="text-center text-t">
+						<h3 className="title ">SearchBar API_NASA</h3>
 					</div>
 					<div>
 						<SearchBar />

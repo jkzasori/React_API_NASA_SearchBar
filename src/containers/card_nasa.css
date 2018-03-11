@@ -1,0 +1,30 @@
+.card{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	background-color: #E7F6F6;
+	flex-wrap: wrap;
+}
+.titleNasa{
+	color: red;
+}
+.description{
+	color: #482011;
+	
+}
+.titleNasa, .description, .date{
+	padding: 15px;
+}
+.contentImage{
+	width: 70%;
+}
+.contentImage, .image{
+	
+	max-width: 700px;
+	min-width: 200px;
+}
+.image{
+	width: 100%;
+}

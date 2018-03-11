@@ -30,7 +30,7 @@ class SearchBar extends Component {
 				<div>
 					<form onSubmit={this.onFormSubmit} className="input-group">
 						<input 
-						placeholder="yyyy-mm-dd "
+						placeholder="yyyy-mm-dd"
 						className="form-control"
 						value={this.state.searchQ}
 						onChange={this.onInputChange}
